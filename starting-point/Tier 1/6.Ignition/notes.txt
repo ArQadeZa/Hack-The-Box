@@ -1,0 +1,1 @@
+Very easy machine , just enumerate the directories after adding the dns to etc/hosts and go to the admin page and guess the login details off of how magento password specifications are supposed to be
