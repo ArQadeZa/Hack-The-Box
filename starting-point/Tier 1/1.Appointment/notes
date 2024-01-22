@@ -1,0 +1,15 @@
+Example of how database connection works in php 
+
+<?php
+mysql_connect("localhost", "db_username", "db_password"); # Connection to the SQL
+Database.
+mysql_select_db("users"); # Database table where user information is stored.
+$username=$_POST['username']; # User-specified username.
+$password=$_POST['password']; #User-specified password.
+$sql="SELECT * FROM users WHERE username='$username' AND password='$password'";
+
+
+therefore you can log in wit username=  admin';#
+
+which will make the full statement:  "SELECT * FROM users WHERE username='admin';#' AND password='$password'";
+which bypasses the password validation

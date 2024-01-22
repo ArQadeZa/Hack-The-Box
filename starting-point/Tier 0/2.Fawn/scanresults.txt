@@ -1,0 +1,103 @@
+# Nmap 7.94SVN scan initiated Fri Jan 19 15:14:52 2024 as: nmap -sC -sV -T5 -vv -oN scanresults.txt 10.129.114.182
+Warning: 10.129.114.182 giving up on port because retransmission cap hit (2).
+Increasing send delay for 10.129.114.182 from 0 to 5 due to 343 out of 857 dropped probes since last increase.
+Nmap scan report for 10.129.114.182
+Host is up, received reset ttl 63 (0.18s latency).
+Scanned at 2024-01-19 15:14:53 EST for 12s
+Not shown: 925 closed tcp ports (reset)
+PORT      STATE    SERVICE         REASON         VERSION
+6/tcp     filtered unknown         no-response
+17/tcp    filtered qotd            no-response
+21/tcp    open     ftp             syn-ack ttl 63 vsftpd 3.0.3
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_-rw-r--r--    1 0        0              32 Jun 04  2021 flag.txt
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to ::ffff:10.10.15.108
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 3
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+259/tcp   filtered esro-gen        no-response
+515/tcp   filtered printer         no-response
+563/tcp   filtered snews           no-response
+616/tcp   filtered sco-sysmgr      no-response
+683/tcp   filtered corba-iiop      no-response
+749/tcp   filtered kerberos-adm    no-response
+843/tcp   filtered unknown         no-response
+873/tcp   filtered rsync           no-response
+888/tcp   filtered accessbuilder   no-response
+1057/tcp  filtered startron        no-response
+1058/tcp  filtered nim             no-response
+1066/tcp  filtered fpo-fns         no-response
+1078/tcp  filtered avocent-proxy   no-response
+1092/tcp  filtered obrpd           no-response
+1126/tcp  filtered hpvmmdata       no-response
+1131/tcp  filtered caspssl         no-response
+1147/tcp  filtered capioverlan     no-response
+1244/tcp  filtered isbconference1  no-response
+1328/tcp  filtered ewall           no-response
+1687/tcp  filtered nsjtp-ctrl      no-response
+1864/tcp  filtered paradym-31      no-response
+1914/tcp  filtered elm-momentum    no-response
+2022/tcp  filtered down            no-response
+2033/tcp  filtered glogger         no-response
+2034/tcp  filtered scoremgr        no-response
+2041/tcp  filtered interbase       no-response
+2043/tcp  filtered isis-bcast      no-response
+2049/tcp  filtered nfs             no-response
+2126/tcp  filtered pktcable-cops   no-response
+2260/tcp  filtered apc-2260        no-response
+2399/tcp  filtered fmpro-fdal      no-response
+2910/tcp  filtered tdaccess        no-response
+3260/tcp  filtered iscsi           no-response
+3372/tcp  filtered msdtc           no-response
+3905/tcp  filtered mupdate         no-response
+5061/tcp  filtered sip-tls         no-response
+5226/tcp  filtered hp-status       no-response
+5550/tcp  filtered sdadmind        no-response
+5850/tcp  filtered unknown         no-response
+5877/tcp  filtered unknown         no-response
+5915/tcp  filtered unknown         no-response
+6004/tcp  filtered X11:4           no-response
+6543/tcp  filtered mythtv          no-response
+6669/tcp  filtered irc             no-response
+6699/tcp  filtered napster         no-response
+7937/tcp  filtered nsrexecd        no-response
+8042/tcp  filtered fs-agent        no-response
+8089/tcp  filtered unknown         no-response
+8099/tcp  filtered unknown         no-response
+8200/tcp  filtered trivnet1        no-response
+8500/tcp  filtered fmtp            no-response
+9001/tcp  filtered tor-orport      no-response
+9102/tcp  filtered jetdirect       no-response
+9415/tcp  filtered unknown         no-response
+9485/tcp  filtered unknown         no-response
+9968/tcp  filtered unknown         no-response
+10002/tcp filtered documentum      no-response
+10012/tcp filtered unknown         no-response
+15003/tcp filtered unknown         no-response
+16001/tcp filtered fmsascon        no-response
+16016/tcp filtered unknown         no-response
+19283/tcp filtered keysrvr         no-response
+20222/tcp filtered ipulse-ics      no-response
+31337/tcp filtered Elite           no-response
+35500/tcp filtered unknown         no-response
+40911/tcp filtered unknown         no-response
+41511/tcp filtered unknown         no-response
+44176/tcp filtered unknown         no-response
+44442/tcp filtered coldfusion-auth no-response
+50800/tcp filtered unknown         no-response
+54045/tcp filtered unknown         no-response
+57294/tcp filtered unknown         no-response
+Service Info: OS: Unix
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Jan 19 15:15:05 2024 -- 1 IP address (1 host up) scanned in 12.70 seconds

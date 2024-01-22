@@ -1,0 +1,4 @@
+info - lists all information of the database
+info -keyspaces - lists all info regarding keyspaces
+keys * - returns all keys in the database
+GET Key - returns the value assigned to the key 

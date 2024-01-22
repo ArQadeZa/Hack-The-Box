@@ -1,0 +1,14 @@
+# Nmap 7.94SVN scan initiated Sat Jan 20 10:26:47 2024 as: nmap -Pn --min-rate=1000 -sV -T5 -vv -p- -oN scan-results.txt 10.129.228.30
+Warning: 10.129.228.30 giving up on port because retransmission cap hit (2).
+Nmap scan report for 10.129.228.30
+Host is up, received user-set (0.18s latency).
+Scanned at 2024-01-20 10:26:47 EST for 105s
+Not shown: 54648 closed tcp ports (reset), 10885 filtered tcp ports (no-response)
+PORT      STATE SERVICE REASON         VERSION
+22/tcp    open  ssh     syn-ack ttl 63 OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0)
+27017/tcp open  mongodb syn-ack ttl 63 MongoDB 3.6.8
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jan 20 10:28:32 2024 -- 1 IP address (1 host up) scanned in 105.43 seconds

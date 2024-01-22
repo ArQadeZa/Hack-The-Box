@@ -1,0 +1,5 @@
+used gobuster dir -x php -u 10.129.80.112 -w /usr/share/dirbuster/wordlists/directory-list-2.3-small.txt
+to iterate through all php pages , 
+
+found admin.php
+guessed login credentials

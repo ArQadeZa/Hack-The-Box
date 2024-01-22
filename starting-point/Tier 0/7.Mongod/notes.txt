@@ -1,0 +1,12 @@
+mongo --host [ip]  - to connect to the mongo db
+
+show dbs - to list all databases
+
+use [dbname]  - move into that db
+
+show collections - shows everything in database
+
+db.collectionName.find() - to get data from database 
+
+db.collectionName.find().pretty() - get output from collection in pretty format
+

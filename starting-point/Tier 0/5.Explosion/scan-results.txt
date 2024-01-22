@@ -1,0 +1,54 @@
+# Nmap 7.94SVN scan initiated Sat Jan 20 04:17:05 2024 as: nmap -sC -sV -p- -T5 -O -oN scan-results.txt 10.129.1.13
+Warning: 10.129.1.13 giving up on port because retransmission cap hit (2).
+Nmap scan report for 10.129.1.13
+Host is up (0.18s latency).
+Not shown: 63657 closed tcp ports (reset), 1864 filtered tcp ports (no-response)
+PORT      STATE SERVICE       VERSION
+135/tcp   open  msrpc         Microsoft Windows RPC
+139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds?
+3389/tcp  open  ms-wbt-server Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: EXPLOSION
+|   NetBIOS_Domain_Name: EXPLOSION
+|   NetBIOS_Computer_Name: EXPLOSION
+|   DNS_Domain_Name: Explosion
+|   DNS_Computer_Name: Explosion
+|   Product_Version: 10.0.17763
+|_  System_Time: 2024-01-20T09:29:09+00:00
+| ssl-cert: Subject: commonName=Explosion
+| Not valid before: 2024-01-19T09:13:45
+|_Not valid after:  2024-07-20T09:13:45
+|_ssl-date: 2024-01-20T09:29:18+00:00; 0s from scanner time.
+5985/tcp  open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+47001/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49664/tcp open  msrpc         Microsoft Windows RPC
+49665/tcp open  msrpc         Microsoft Windows RPC
+49666/tcp open  msrpc         Microsoft Windows RPC
+49667/tcp open  msrpc         Microsoft Windows RPC
+49668/tcp open  msrpc         Microsoft Windows RPC
+49669/tcp open  msrpc         Microsoft Windows RPC
+49670/tcp open  msrpc         Microsoft Windows RPC
+49671/tcp open  msrpc         Microsoft Windows RPC
+Device type: general purpose|specialized
+Running (JUST GUESSING): Microsoft Windows 2019|2012|10|2022|7|2016|2008|Vista (95%)
+OS CPE: cpe:/o:microsoft:windows_server_2012:r2 cpe:/o:microsoft:windows_10 cpe:/o:microsoft:windows_7::sp1 cpe:/o:microsoft:windows_server_2016 cpe:/o:microsoft:windows_10:1511 cpe:/o:microsoft:windows_server_2008::sp2 cpe:/o:microsoft:windows_vista::sp1:home_premium
+Aggressive OS guesses: Microsoft Windows Server 2019 (95%), Microsoft Windows Server 2012 R2 (92%), Microsoft Windows 10 1909 (92%), Microsoft Windows Server 2022 (89%), Microsoft Windows 7 SP1 (87%), Microsoft Windows Server 2016 (87%), Microsoft Windows 10 1511 (86%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 (86%), Microsoft Windows Windows 7 SP1 (86%), Microsoft Windows Vista Home Premium SP1, Windows 7, or Windows Server 2008 (86%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2024-01-20T09:29:12
+|_  start_date: N/A
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jan 20 04:29:19 2024 -- 1 IP address (1 host up) scanned in 733.95 seconds

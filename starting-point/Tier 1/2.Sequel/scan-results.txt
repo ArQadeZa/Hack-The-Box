@@ -1,0 +1,25 @@
+# Nmap 7.94SVN scan initiated Sun Jan 21 03:56:10 2024 as: nmap -sC -sV -T5 -O -v -oN scan-results.txt 10.129.236.107
+Nmap scan report for 10.129.236.107
+Host is up (0.18s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+3306/tcp open  mysql?
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.5.5-10.3.27-MariaDB-0+deb10u1
+|   Thread ID: 65
+|   Capabilities flags: 63486
+|   Some Capabilities: FoundRows, Support41Auth, Speaks41ProtocolOld, ConnectWithDatabase, Speaks41ProtocolNew, IgnoreSigpipes, IgnoreSpaceBeforeParenthesis, SupportsTransactions, SupportsCompression, InteractiveClient, SupportsLoadDataLocal, ODBCClient, DontAllowDatabaseTableColumn, LongColumnFlag, SupportsMultipleStatments, SupportsAuthPlugins, SupportsMultipleResults
+|   Status: Autocommit
+|   Salt: I6oNx59_R\Y+gHp|>]>Y
+|_  Auth Plugin Name: mysql_native_password
+Aggressive OS guesses: Linux 5.0 (99%), Linux 5.0 - 5.4 (95%), HP P2000 G3 NAS device (93%), Linux 4.15 - 5.8 (93%), Linux 5.3 - 5.4 (93%), Linux 2.6.32 (92%), Linux 2.6.32 - 3.1 (92%), Ubiquiti AirMax NanoStation WAP (Linux 2.6.32) (92%), Linux 3.7 (92%), Linux 5.0 - 5.5 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 1.426 days (since Fri Jan 19 17:46:13 2024)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=257 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Jan 21 03:59:45 2024 -- 1 IP address (1 host up) scanned in 214.83 seconds

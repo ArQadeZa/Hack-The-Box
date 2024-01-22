@@ -1,0 +1,45 @@
+# Nmap 7.94SVN scan initiated Fri Jan 19 15:24:39 2024 as: nmap -sC -sV -T5 -O -oN scan-results.txt 10.129.77.112
+Warning: 10.129.77.112 giving up on port because retransmission cap hit (2).
+Nmap scan report for 10.129.77.112
+Host is up (0.22s latency).
+Not shown: 980 closed tcp ports (reset)
+PORT      STATE    SERVICE       VERSION
+17/tcp    filtered qotd
+89/tcp    filtered su-mit-tg
+135/tcp   open     msrpc         Microsoft Windows RPC
+139/tcp   open     netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp   open     microsoft-ds?
+1022/tcp  filtered exp2
+1213/tcp  filtered mpc-lifenet
+1272/tcp  filtered cspmlockmgr
+1998/tcp  filtered x25-svc-port
+2068/tcp  filtered avocentkvm
+2717/tcp  filtered pn-requester
+2967/tcp  filtered symantec-av
+3920/tcp  filtered exasoftport1
+5999/tcp  filtered ncd-conf
+7201/tcp  filtered dlip
+9011/tcp  filtered d-star
+9999/tcp  filtered abyss
+10010/tcp filtered rxapi
+27353/tcp filtered unknown
+34573/tcp filtered unknown
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 2019|10|2012|2022 (93%)
+OS CPE: cpe:/o:microsoft:windows_10 cpe:/o:microsoft:windows_server_2012:r2
+Aggressive OS guesses: Microsoft Windows Server 2019 (93%), Microsoft Windows 10 1909 (90%), Microsoft Windows Server 2012 R2 (89%), Microsoft Windows Server 2022 (86%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2024-01-20T00:25:39
+|_  start_date: N/A
+|_clock-skew: 4h00m01s
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Jan 19 15:25:42 2024 -- 1 IP address (1 host up) scanned in 63.93 seconds

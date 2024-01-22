@@ -1,0 +1,5 @@
+rsync rsync://10.129.228.37  -> seems to only display public shares
+
+rsync -av rsync://10.129.228.37/public/ [destination]  -> transfers the files under public folder to destination
+
+

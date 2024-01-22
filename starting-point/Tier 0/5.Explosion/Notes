@@ -1,0 +1,3 @@
+RDP - Remote Desktop Protocol
+
+used xfreerdp /v:[host]  /cert:ignore /u:Administrator to connect to ms-wbt-server

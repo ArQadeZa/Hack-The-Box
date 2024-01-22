@@ -1,0 +1,3 @@
+used to connect to host on port with username 
+mysql -h 10.129.236.107 -P 3306 -u root
+

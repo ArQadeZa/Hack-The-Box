@@ -1,0 +1,3 @@
+Telnet is a virtual teminal on remote systems
+
+metasploit has a aux to brute force the uname and passw , but its very slow

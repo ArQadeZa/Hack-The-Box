@@ -1,0 +1,97 @@
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-01-19 14:34 EST
+NSE: Loaded 156 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 14:34
+Completed NSE at 14:34, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 14:34
+Completed NSE at 14:34, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 14:34
+Completed NSE at 14:34, 0.00s elapsed
+Initiating Ping Scan at 14:34
+Scanning 10.129.226.55 [2 ports]
+Completed Ping Scan at 14:34, 0.21s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 14:34
+Completed Parallel DNS resolution of 1 host. at 14:34, 0.01s elapsed
+DNS resolution of 1 IPs took 0.01s. Mode: Async [#: 2, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating Connect Scan at 14:34
+Scanning 10.129.226.55 [1000 ports]
+Discovered open port 23/tcp on 10.129.226.55
+Increasing send delay for 10.129.226.55 from 0 to 5 due to max_successful_tryno increase to 4
+Increasing send delay for 10.129.226.55 from 5 to 10 due to max_successful_tryno increase to 5
+Increasing send delay for 10.129.226.55 from 10 to 20 due to max_successful_tryno increase to 6
+Increasing send delay for 10.129.226.55 from 20 to 40 due to 11 out of 16 dropped probes since last increase.
+Increasing send delay for 10.129.226.55 from 40 to 80 due to 11 out of 13 dropped probes since last increase.
+Increasing send delay for 10.129.226.55 from 80 to 160 due to max_successful_tryno increase to 7
+Increasing send delay for 10.129.226.55 from 160 to 320 due to max_successful_tryno increase to 8
+Connect Scan Timing: About 59.96% done; ETC: 14:36 (0:00:30 remaining)
+Connect Scan Timing: About 65.89% done; ETC: 14:36 (0:00:39 remaining)
+
+zsh: suspended  nmap -sC -sV -vvv 10.129.226.55
+                                                                             
+┌──(kali㉿kali)-[~/Desktop/HTB/starting-point/Meow]
+└─$ nmap -sC -sV -vvv -T4 10.129.226.55
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-01-19 14:36 EST
+NSE: Loaded 156 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 14:36
+Completed NSE at 14:36, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 14:36
+Completed NSE at 14:36, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 14:36
+Completed NSE at 14:36, 0.00s elapsed
+Initiating Ping Scan at 14:36
+Scanning 10.129.226.55 [2 ports]
+Completed Ping Scan at 14:36, 1.68s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 14:36
+Completed Parallel DNS resolution of 1 host. at 14:36, 0.01s elapsed
+DNS resolution of 1 IPs took 0.01s. Mode: Async [#: 2, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating Connect Scan at 14:36
+Scanning 10.129.226.55 [1000 ports]
+Discovered open port 23/tcp on 10.129.226.55
+Increasing send delay for 10.129.226.55 from 0 to 5 due to 88 out of 219 dropped probes since last increase.
+Increasing send delay for 10.129.226.55 from 5 to 10 due to 11 out of 21 dropped probes since last increase.
+Warning: 10.129.226.55 giving up on port because retransmission cap hit (6).
+Completed Connect Scan at 14:36, 24.10s elapsed (1000 total ports)
+Initiating Service scan at 14:36
+Scanning 1 service on 10.129.226.55
+Completed Service scan at 14:36, 10.40s elapsed (1 service on 1 host)
+NSE: Script scanning 10.129.226.55.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 14:36
+Completed NSE at 14:37, 10.38s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 14:37
+Completed NSE at 14:37, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 14:37
+Completed NSE at 14:37, 0.00s elapsed
+Nmap scan report for 10.129.226.55
+Host is up, received conn-refused (0.18s latency).
+Scanned at 2024-01-19 14:36:21 EST for 45s
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE    SERVICE        REASON      VERSION
+23/tcp   open     telnet         syn-ack     Linux telnetd
+1080/tcp filtered socks          no-response
+2875/tcp filtered dxmessagebase2 no-response
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 3) scan.
+Initiating NSE at 14:37
+Completed NSE at 14:37, 0.00s elapsed
+NSE: Starting runlevel 2 (of 3) scan.
+Initiating NSE at 14:37
+Completed NSE at 14:37, 0.00s elapsed
+NSE: Starting runlevel 3 (of 3) scan.
+Initiating NSE at 14:37
+Completed NSE at 14:37, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 46.79 seconds
+
