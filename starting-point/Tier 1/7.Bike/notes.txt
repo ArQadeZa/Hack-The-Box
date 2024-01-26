@@ -1,0 +1,9 @@
+Server Side template Injection is when you use native template syntax (Node.js in this case) to inject a malicious payload into a template
+a example of vulnerable code would be -> $output = $twig->render("Dear" .$_GET["name"]);
+in the above a part of the template is being gererated dynamically by the server, By using the GET parameter name as a entrypoint for a payload
+eg. http://vulnerable-website/?name=\{bad-stuff-here\}
+to detect this by using plaintext context"{{7*7}}" 
+to detect code  context it could be similar to http://vulnerable-website.com/?greeting=data.username and if you are lucky the sserver wiill display the errors and you will be able to find the engine used  
+https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection this website demonstrates various ways to detect and exploit SSTI
+After finding a way to install extenal modules in node.js by using the require() function in mainProcess , use it to install child_process 
+child_process -> allows you to execute system commands  
