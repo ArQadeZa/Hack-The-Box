@@ -1,0 +1,3 @@
+Because its a windows machine we can try to log in to Administrator account
+
+using a blank password grants us access to the account *misconfiguration*

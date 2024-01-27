@@ -1,0 +1,8 @@
+after scanning you find a jenkins server running
+
+trying default logins gives you access
+
+jenkins allows you to run groovy scripts 
+	-> because it allows you to run groovy scripts , obtain a reverse shell script in groovy
+	-> create listener using netcat -nvlp <port>
+
