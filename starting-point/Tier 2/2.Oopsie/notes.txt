@@ -1,0 +1,6 @@
+you see a web server on port 80 
+	-> web server = run dirbuster
+	
+because gobuster did not return any valuable information we try spidering through the web page
+	-> burp web spider 
+		-> creates a site map from all the links it finds on the web page and requests them to see what is found

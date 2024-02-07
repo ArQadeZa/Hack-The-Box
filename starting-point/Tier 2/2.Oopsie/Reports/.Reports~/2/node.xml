@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cherrytree>
+  <node name="BurpSuite SiteMap" unique_id="2" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1707245300" ts_lastsave="1707249972">
+    <rich_text>
+
+The site map shows that there is a login screen we are not directed to by default
+
+
+
+by browsing to this link we can log in as a guest 
+
+
+checking the interceptor we can see the webpage uses cookies , by editing the cookies we might be able to access the admin account
+we can try to bruteforce the cookie for the admin by using the intruder function in Burp </rich_text>
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+</rich_text>
+    <encoded_png char_offset="0" justification="left" link="" sha256sum="668b5d66f1315e3e27e0687a3611550a2d673f5a8d86354fa37b9b4405b6a408"/>
+    <encoded_png char_offset="86" justification="left" link="" sha256sum="b01c4ef98a6c9ab32cb9d657a2c8b11fe2cace78b83a761beaf3a243a7e821ea"/>
+    <encoded_png char_offset="140" justification="left" link="" sha256sum="968e72b3c84eec842c7bf5a81ef9c0ff6462d18ba18929481e1508b221f818b9"/>
+    <encoded_png char_offset="363" justification="left" link="" sha256sum="018fa0990ed2e5de75a21a14bb8bd0d17d9e7ffd684a197a48b04960616425f3"/>
+    <encoded_png char_offset="364" justification="left" link="" sha256sum="17063fa1b23511e3c59472a91977c84e4aeea22247263468a9d676a4ac4b127c"/>
+  </node>
+</cherrytree>
