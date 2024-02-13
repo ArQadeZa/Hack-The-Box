@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cherrytree>
+  <node name="CookieManipulation" unique_id="3" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1707250014" ts_lastsave="1707329462">
+    <rich_text>the cookie manipulation can be done in the browser and it then leads to some information disclosure
+
+
+
+
+Above in the url we can see accounts &amp; id in the url  if we change that we may recieve data we were not supposed to
+
+
+
+changing the value to 1 discloses the admin account's information -&gt; which we can now pass to the cookie in burp</rich_text>
+    <encoded_png char_offset="102" justification="left" link="" sha256sum="9cad770049b4be3e8b836d82ee30beb40f03ba05a2d346896759c90b6d6759eb"/>
+    <encoded_png char_offset="222" justification="left" link="" sha256sum="85b4b68cfa90920e456b6b0089478c278878da705113635aea347742e12aaf19"/>
+  </node>
+</cherrytree>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cherrytree>
+  <node name="UploadsPage" unique_id="4" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1707330615" ts_lastsave="1707411174">
+    <rich_text>On the uploads page we are a admin role  as discussed in Cookie manipulation 	
+	-&gt; uploading files could be risky which could lead to remote code execution
+	-&gt; we can try uploading a web shell at /usr/share/webshells/
+			-&gt;WebSHell: </rich_text>
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+
+	
+	now after uploading the shell we know it was downloaded to /uploads from our gobuster results 
+	we set up a netcat listener
+	</rich_text>
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+
+After setting up the listener we attempt to call the uploaded file via the url
+</rich_text>
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+
+calling the file lead to a connection  on the netcat listener
+</rich_text>
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+
+To upgrade the shell for better use we can run
+	-&gt; python3 -c 'import pty;pty.spawn("/bin/bash")'
+	
+This is only a user account we want a root account - we can achieve this by looking for password files etc inside  the machine
+   ⇒ because this is www-data  user &amp; it had a login functionality we can review the code to see if there is any hardcoded values that may disclose some information
+   ⇒ search all files for anything related to passw
+
+</rich_text>
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+
+and we find the username and password MEGACORP_4dm1n!!
+
+now to log into this account we call the -&gt; su user command
+this did not work so its not the password for robert account
+
+but in the db.php file we find robert's password -&gt;$conn = mysqli_connect('localhost','robert','M3g4C0rpUs3r!','garage');
+
+after logging in to the robert account with -&gt; su robert
+
+we run the id command to see to which groups robert belongs:
+ 
+ 
+ if we do :
+ </rich_text>
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+ -&gt; find / -group bugtracker 2&gt;/dev/null
+ 	-&gt; the above finds anything  |  2&gt; specifies to move output of errors to /dev/null which clears the std output of all errors
+  
+  
+  Then we check the permissions of the file
+  	-&gt; ls -la /usr/bin/bugtracker  -&gt; -rwsr-xr-- 1 root bugtracker 8792 Jan 25  2020 /usr/bin/bugtracker -&gt; shows permissions of bugtracker
+
+  -&gt;file /usr/bin/bugtracker -&gt; usr/bin/bugtracker: setuid ELF 64-bit LSB shared object, -&gt; shows more information on the dir
+  		-&gt; in this case we have a setuid 
+  			</rich_text>
+    <encoded_png char_offset="233" justification="left" link="" sha256sum="4fe66b2bf374ccec204144fabe654b55696faf0e6b910dd9f46745db7d0914c0"/>
+    <encoded_png char_offset="364" justification="left" link="" sha256sum="b43a67a149c0a90c623fc32ae892b9c1f6bde34110c28a151b6167f5840f0a45"/>
+    <encoded_png char_offset="446" justification="left" link="" sha256sum="0bd31faa3d3b8dd6113f1d35e338e141da7b7d0b39a239e7adce583b7a77efae"/>
+    <encoded_png char_offset="511" justification="left" link="" sha256sum="ba7f31108564a408cd32bd761539710709e26c86b45aa5d20dd97f26074ea94e"/>
+    <encoded_png char_offset="959" justification="left" link="" sha256sum="a02c72ca7973d2f377566759c01ab4e9ba54f7afcdd1db86b50f6881c0c88813"/>
+    <encoded_png char_offset="1383" justification="left" link="" sha256sum="d16853e8aadcbf31a76037ac5343b65171dc8e44390423ae76cc844ef46ec5d8"/>
+    <encoded_png char_offset="1400" justification="left" link="" sha256sum="2dca2531b7df8fcdf41a8f9d369909611ebffbe0f2feff396cbd554b66203d76"/>
+  </node>
+</cherrytree>

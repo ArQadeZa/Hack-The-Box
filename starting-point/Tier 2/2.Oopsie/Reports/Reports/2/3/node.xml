@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
-  <node name="CookieManipulation" unique_id="3" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1707250014" ts_lastsave="1707250020">
-    <rich_text>the cookie manipulation cna be done in the browser </rich_text>
+  <node name="CookieManipulation" unique_id="3" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1707250014" ts_lastsave="1707408744">
+    <rich_text>the cookie manipulation can be done in the browser and it then leads to some information disclosure
+
+
+
+
+Above in the url we can see accounts &amp; id in the url  if we change that we may recieve data we were not supposed to
+
+</rich_text>
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+
+changing the value to 1 discloses the admin account's information 
+</rich_text>
+    <rich_text justification="left"></rich_text>
+    <rich_text>
+
+after adding the data to the cookies and browsing to the uploads url we still have access as “admin”</rich_text>
+    <encoded_png char_offset="221" justification="left" link="" sha256sum="85b4b68cfa90920e456b6b0089478c278878da705113635aea347742e12aaf19"/>
+    <encoded_png char_offset="291" justification="left" link="" sha256sum="8685f8e43684d9a90254c2e969a883f044f7074280c599727e85dd56c3c159c6"/>
   </node>
 </cherrytree>
